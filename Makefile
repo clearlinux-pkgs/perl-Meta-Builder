@@ -1,0 +1,5 @@
+PKG_NAME := perl-Meta-Builder
+URL = https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Meta-Builder-0.003.tar.gz
+ARCHIVES = 
+
+include ../common/Makefile.common
