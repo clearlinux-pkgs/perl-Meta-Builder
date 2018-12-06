@@ -4,7 +4,7 @@
 #
 Name     : perl-Meta-Builder
 Version  : 0.004
-Release  : 6
+Release  : 7
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Meta-Builder-0.004.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Meta-Builder-0.004.tar.gz
 Summary  : 'Tools for creating Meta objects to track custom metrics.'
