@@ -59,9 +59,9 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1/Meta/Builder.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Meta/Builder/Base.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Meta/Builder/Util.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Meta/Builder.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Meta/Builder/Base.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Meta/Builder/Util.pm
 
 %files dev
 %defattr(-,root,root,-)
