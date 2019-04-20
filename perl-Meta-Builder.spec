@@ -4,10 +4,10 @@
 #
 Name     : perl-Meta-Builder
 Version  : 0.004
-Release  : 9
+Release  : 10
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Meta-Builder-0.004.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Meta-Builder-0.004.tar.gz
-Summary  : 'Tools for creating Meta objects to track custom metrics.'
+Summary  : Tools for creating Meta objects to track custom metrics.
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 BuildRequires : buildreq-cpan
@@ -24,6 +24,7 @@ DESCRIPTION
 Summary: dev components for the perl-Meta-Builder package.
 Group: Development
 Provides: perl-Meta-Builder-devel = %{version}-%{release}
+Requires: perl-Meta-Builder = %{version}-%{release}
 
 %description dev
 dev components for the perl-Meta-Builder package.
