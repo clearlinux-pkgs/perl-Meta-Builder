@@ -4,12 +4,13 @@
 #
 Name     : perl-Meta-Builder
 Version  : 0.004
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Meta-Builder-0.004.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Meta-Builder-0.004.tar.gz
-Summary  : Tools for creating Meta objects to track custom metrics.
+Summary  : 'Tools for creating Meta objects to track custom metrics.'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-Meta-Builder-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Fennec::Lite)
 BuildRequires : perl(Test::Exception)
@@ -30,14 +31,24 @@ Requires: perl-Meta-Builder = %{version}-%{release}
 dev components for the perl-Meta-Builder package.
 
 
+%package perl
+Summary: perl components for the perl-Meta-Builder package.
+Group: Default
+Requires: perl-Meta-Builder = %{version}-%{release}
+
+%description perl
+perl components for the perl-Meta-Builder package.
+
+
 %prep
 %setup -q -n Meta-Builder-0.004
+cd %{_builddir}/Meta-Builder-0.004
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -60,12 +71,15 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Meta/Builder.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Meta/Builder/Base.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Meta/Builder/Util.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Meta::Builder.3
 /usr/share/man/man3/Meta::Builder::Base.3
 /usr/share/man/man3/Meta::Builder::Util.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Meta/Builder.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Meta/Builder/Base.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Meta/Builder/Util.pm
