@@ -4,7 +4,7 @@
 #
 Name     : perl-Meta-Builder
 Version  : 0.004
-Release  : 14
+Release  : 15
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Meta-Builder-0.004.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Meta-Builder-0.004.tar.gz
 Summary  : 'Tools for creating Meta objects to track custom metrics.'
@@ -80,6 +80,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.32.1/Meta/Builder.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Meta/Builder/Base.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Meta/Builder/Util.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Meta/Builder.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Meta/Builder/Base.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Meta/Builder/Util.pm
